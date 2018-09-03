@@ -1,0 +1,5 @@
+#!/bin/bash
+
+iverilog testbenches/fixed_point_tb.v verilog/fixed_point.v
+vvp a.out
+gtkwave fixed_point.vcd

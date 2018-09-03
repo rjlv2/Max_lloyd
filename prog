@@ -1,0 +1,9 @@
+#!/bin/bash
+
+yosys -p "synth_ice40 -blif lloyd_max.blif; proc_mux -ifx" verilog/bin.v
+
+arachne-pnr -q -d 5k -P sg48 -p lloyd_max.pcf lloyd_max.blif -o lloyd_max.asc
+
+icepack lloyd_max.asc lloyd_max.bin
+
+iceprog -S lloyd_max.bin

@@ -1,0 +1,17 @@
+#pcf file for the iCE40 Ultra Plus FPGA
+
+set_io scl 45  			# SCL to pin IOB_5B
+set_io sda 47				# SDA to pin IOB_2A
+
+#set_io debug_signal 46 # 0A
+
+#remove/comment out the following if signals not used
+set_io debug_signal[7] 9  #16A
+set_io debug_signal[6] 10 #18A
+set_io debug_signal[5] 11 #20A
+set_io debug_signal[4] 18 #31B
+set_io debug_signal[3] 19 #29B
+set_io debug_signal[2] 13 #24A
+set_io debug_signal[1] 21 #23B
+set_io debug_signal[0] 12 #22A
+
